@@ -18,16 +18,30 @@ export default function App(props: AppProps) {
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
+        defaultProps={{
+          Container: {
+            sizes: {
+              xs: 480,
+              sm: 640,
+              md: 768,
+              lg: 1024,
+              xl: 1280,
+              xl2: 1600,
+            },
+          },
+        }}
         theme={{
           fontFamily: "Lato, sans-serif",
           fontFamilyMonospace: "Lato, sans-serif",
           headings: { fontFamily: "Lato, sans-serif" },
           colorScheme: "light",
           colors: {
-            primary: ["#06283D"],
-            secondary: ["#1363DF"],
-            tertiary: ["#47B5FF"],
-            quaternary: ["#DFF6FF"],
+            primary: ["#FFFFFF"],
+            secondary: ["#F0F3F8"],
+            tertiary: ["#38369A"],
+            quaternary: ["#18222F"],
+            quinary: ["#141D36"],
+            senary: ["#E3EAF2"],
           },
           fontSizes: {
             xs: 12,
@@ -38,6 +52,14 @@ export default function App(props: AppProps) {
             xl2: 24,
             xl3: 30,
             xl4: 36,
+          },
+          breakpoints: {
+            xs: 480,
+            sm: 640,
+            md: 768,
+            lg: 1024,
+            xl: 1280,
+            xl2: 1600,
           },
         }}
       >
