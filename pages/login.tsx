@@ -13,7 +13,7 @@ import {
   Image,
   useMantineTheme,
 } from "@mantine/core";
-import { Branding } from "../src/components/index";
+import { Branding, PrimaryButton } from "../src/components/index";
 import { useForm } from "react-hook-form";
 
 const Login: NextPage = () => {
@@ -135,21 +135,12 @@ const Login: NextPage = () => {
                       {...register("password")}
                     />
                     <Group>
-                      <Button
-                        size="md"
-                        sx={(theme) => ({
-                          backgroundColor: theme.colors.tertiary[0],
-                          "&:hover": {
-                            backgroundColor: theme.fn.darken(
-                              theme.colors.tertiary[0],
-                              0.1
-                            ),
-                          },
-                          alignSelf: "start",
-                        })}
-                      >
-                        Login
-                      </Button>
+                      <PrimaryButton
+                        title="Login"
+                        onClick={() => {
+                          alert("Hello World");
+                        }}
+                      />
                       <Button
                         variant="subtle"
                         size="md"
@@ -169,7 +160,6 @@ const Login: NextPage = () => {
               <Box></Box>
             </Stack>
           </Container>
-
           <Box
             sx={(theme) => ({
               width: "50%",
